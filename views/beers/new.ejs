@@ -1,0 +1,18 @@
+<%- include('../partials/header', {
+    title: "New Beer Style Page"
+}) %>
+
+<h1>New Beer Page</h1>
+
+<form action="/beers" method="POST">
+    Name: <input type="text" name="name"><br>
+    Style: <input type="text" name="style"><br>
+    Appearance: <input type="text" name="appearance"><br>
+    Aroma: <input type="text" name="aroma"><br>
+    Flavor: <input type="text" name="flavor"><br>
+    ABV: <input type="number" min="0" name="ABV"><br>
+    IBU: <input type="number" min="0" name="IBU"><br>
+</form>
+
+
+<%- include('../partials/footer') %>

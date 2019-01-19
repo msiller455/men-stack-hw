@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 //New Route
 router.get('/new', (req, res) => {
-    
+    res.render('./beers/new.ejs');
 });
 
 //Create Route
