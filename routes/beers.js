@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+//This is the model data
+const Beer = require('../models/beer');
+
 //Index Route
 router.get('/', (req, res) => {
 
