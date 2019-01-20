@@ -36,7 +36,16 @@ router.post('/', (req, res) => {
 
 //Edit Route
 router.get('/:id/edit', (req, res) => {
-
+    Beer.findById(req.params.id, (err, foundBeer) => {
+        if(err) {
+            console.log(err);
+        } else {
+            console.log(foundBeer);
+            res.render('./beers/edit.ejs', {
+                beer: foundBeer
+            });
+        }
+    });
 });
 
 //Update Route

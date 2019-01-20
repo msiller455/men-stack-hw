@@ -1,0 +1,18 @@
+<%- include('../partials/header', {
+    title: "Beer Edit Page"
+}) %>
+<h1>Beer Edit Page</h1>
+
+<form action="/beers/<%=beer._id%>?_method=PUT" method="POST">
+    Name: <input type="text" name="name" value="<%=beer.name%>"><br>
+    Style: <input type="text" name="style" value="<%=beer.style%>"><br>
+    Appearance: <input type="text" name="appearance" value="<%=beer.appearance%>"><br>
+    Aroma: <input type="text" name="aroma" value="<%=beer.aroma%>"><br>
+    Flavor: <input type="text" name="flavor" value="<%=beer.flavor%>"><br>
+    ABV: <input type="number" min="0" name="ABV" value="<%=beer.ABV%>"><br>
+    IBU: <input type="number" min="0" name="IBU" value="<%=beer.IBU%>"><br>
+
+    <button type="submit">Make changes</button>
+</form>
+
+<%- include('../partials/footer') %>
