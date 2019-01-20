@@ -1,0 +1,19 @@
+<%- include('../partials/header', {
+    title: beer.name
+}) %>
+<h1><%=title%></h1>
+
+<p>
+    This beer is called <%= beer.name %>.<br>
+    It is a <%= beer.style %> style beer.<br>
+    It has a <%= beer.appearance %> appearance.<br>
+    It has a <%= beer.aroma %> nose.<br>
+    It has flavor notes of <%= beer.flavor %>.<br>
+    It has an ABV of <%= beer.ABV %>.<br>
+    It has an IBU rating of <%= beer.IBU %>.<br>
+    <a href="/beers">Back to homepage</a><br>
+</p>
+
+
+
+<%- include('../partials/footer') %>

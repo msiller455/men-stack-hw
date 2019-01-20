@@ -46,7 +46,16 @@ router.put('/:id', (req, res) => {
 
 //Show Route
 router.get('/:id', (req, res) => {
-
+    Beer.findById(req.params.id, (err, foundBeer) => {
+        if(err) {
+            console.log(err);
+        } else {
+            console.log(foundBeer);
+            res.render('show.ejs', {
+                beer: foundBeer
+            });
+        }
+    });
 });
 
 //Delete Route
