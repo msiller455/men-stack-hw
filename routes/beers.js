@@ -51,7 +51,7 @@ router.get('/:id', (req, res) => {
             console.log(err);
         } else {
             console.log(foundBeer);
-            res.render('show.ejs', {
+            res.render('./beers/show.ejs', {
                 beer: foundBeer
             });
         }
