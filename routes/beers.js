@@ -16,7 +16,14 @@ router.get('/new', (req, res) => {
 
 //Create Route
 router.post('/', (req, res) => {
-
+    Beer.create(req.body, (err, newBeer) => {
+        if(err) {
+            res.send(err);
+        } else {
+            console.log(newBeer + ' cheers!');
+            res.redirect('/beers');
+        }
+    })
 });
 
 //Edit Route
