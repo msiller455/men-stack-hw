@@ -1,0 +1,13 @@
+<%- include('../partials/header', {
+    title: "Beer Index Page"
+}) %>
+<h1>Beer Index Page</h1>
+
+<ul>
+    <% beers.forEach(beer => { %>
+        <li><%= beer.name %></li>
+    <% }) %>
+</ul>
+
+
+<%- include('../partials/footer') %>

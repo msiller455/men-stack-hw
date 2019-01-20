@@ -15,7 +15,6 @@ router.get('/', (req, res) => {
             });
         }
     });
-    res.render('')
 });
 
 //New Route
