@@ -60,7 +60,14 @@ router.get('/:id', (req, res) => {
 
 //Delete Route
 router.get('/:id', (req, res) => {
-
+    Beer.findOneAndRemove(req.params.id, (err, deletedBeer) => {
+        if(err) {
+            console.log(err);
+        } else {
+            console.log(deletedBeer);
+            res.redirect('/beers');
+        }
+    });
 });
 
 module.exports = router;
