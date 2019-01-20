@@ -59,7 +59,7 @@ router.get('/:id', (req, res) => {
 });
 
 //Delete Route
-router.get('/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
     Beer.findOneAndRemove(req.params.id, (err, deletedBeer) => {
         if(err) {
             console.log(err);
