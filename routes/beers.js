@@ -50,7 +50,14 @@ router.get('/:id/edit', (req, res) => {
 
 //Update Route
 router.put('/:id', (req, res) => {
-
+    Beer.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, foundBeer) => {
+        if(err) {
+            console.log(err);
+        } else {
+            console.log("Edited " + foundBeer);
+            res.redirect('/beers');
+        }
+    });
 });
 
 //Show Route
