@@ -6,7 +6,16 @@ const Beer = require('../models/beer');
 
 //Index Route
 router.get('/', (req, res) => {
-
+    Beer.find({}, (err, allBeers) => {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render('./beers/index.ejs', {
+                beers: allBeers
+            });
+        }
+    });
+    res.render('')
 });
 
 //New Route
